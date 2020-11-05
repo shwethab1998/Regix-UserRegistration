@@ -1,11 +1,11 @@
 #!/bin/bash
 
-read -p "Enter your last name : " lname
+read -p "Enter your Email ID : " email
 
-pat="^[a-zA-z]{3,}$"
-if [[ $lname =~ $pat ]]
+pat="^[a-zA-z0-9]{1,}([._+-][0-9a-zA-Z]+)*@{1}[a-zA-Z]{1,}[a-zA-Z]{2,4}([.][a-zA-Z]{2,3}){0,2}$"
+if [[ $email =~ $pat ]]
 then
-        echo "Valid Last Name"
+        echo "Valid Email ID"
 else
-        echo "Invalid Last Name"
+        echo "Invalid Email ID"
 fi
