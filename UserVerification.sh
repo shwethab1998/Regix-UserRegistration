@@ -1,11 +1,11 @@
 #!/bin/bash
 
-read -p "Enter your Email ID : " email
+read -p "Enter your Mobile Number : " num
 
-pat="^[a-zA-z0-9]{1,}([._+-][0-9a-zA-Z]+)*@{1}[a-zA-Z]{1,}[a-zA-Z]{2,4}([.][a-zA-Z]{2,3}){0,2}$"
-if [[ $email =~ $pat ]]
+pat="^[0-9]{2}[+][ ]{1}[0-9]{10}$"
+if [[ $num =~ $pat ]]
 then
-        echo "Valid Email ID"
+        echo "Valid Mobile Number"
 else
-        echo "Invalid Email ID"
+        echo "Invalid Mobile Number"
 fi
